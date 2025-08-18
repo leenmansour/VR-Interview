@@ -33,14 +33,18 @@ public class StartInterviewUI : MonoBehaviour
 
     void OnSubmit()
     {
+        Debug.Log(" Submit clicked");
         var n = nameInput != null ? nameInput.text.Trim() : "";
         if (string.IsNullOrEmpty(n)) return;
 
         // store the name for the next scene (simple + reliable)
         PlayerPrefs.SetString("PlayerName", n);
 
-        // load the interview scene
-        SceneManager.LoadScene(interviewSceneName);
-        // or: SceneManager.LoadSceneAsync(interviewSceneName);
+        // after validating input
+PlayerPrefs.SetString("UserName", nameInput.text.Trim());
+PlayerPrefs.Save();                     // optional but safe
+SceneManager.LoadScene("Interview");    // or your next scene
+
+
     }
 }
