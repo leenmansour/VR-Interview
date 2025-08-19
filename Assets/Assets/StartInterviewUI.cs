@@ -37,5 +37,10 @@ public class StartInterviewUI : MonoBehaviour
     
     SceneManager.LoadScene("Interview");
 }
-
+public void LoadScene()
+{
+    Debug.Log("Home clicked");
+    
+    SceneManager.LoadScene("Interview");
+}
 }
