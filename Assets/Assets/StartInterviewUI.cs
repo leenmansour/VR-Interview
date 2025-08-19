@@ -31,20 +31,11 @@ public class StartInterviewUI : MonoBehaviour
             submitButton.interactable = !string.IsNullOrWhiteSpace(nameInput.text);
     }
 
-    void OnSubmit()
-    {
-        Debug.Log(" Submit clicked");
-        var n = nameInput != null ? nameInput.text.Trim() : "";
-        if (string.IsNullOrEmpty(n)) return;
+   public void OnSubmit()
+{
+    Debug.Log("Submit clicked");
+    
+    SceneManager.LoadScene("Interview");
+}
 
-        // store the name for the next scene (simple + reliable)
-        PlayerPrefs.SetString("PlayerName", n);
-
-        // after validating input
-PlayerPrefs.SetString("UserName", nameInput.text.Trim());
-PlayerPrefs.Save();                     // optional but safe
-SceneManager.LoadScene("Interview");    // or your next scene
-
-
-    }
 }

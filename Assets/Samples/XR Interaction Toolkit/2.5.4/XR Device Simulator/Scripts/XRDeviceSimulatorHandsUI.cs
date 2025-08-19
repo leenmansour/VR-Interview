@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
@@ -14,13 +15,13 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
         {
             [SerializeField]
             Sprite m_Sprite;
-            [SerializeField] 
+            [SerializeField]
             Image m_ButtonImage;
-            [SerializeField] 
+            [SerializeField]
             Image m_Icon;
-            [SerializeField] 
+            [SerializeField]
             Text m_BindText;
-            [SerializeField] 
+            [SerializeField]
             Text m_TitleText;
 
             InputAction m_Action;
@@ -34,12 +35,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
             public void Initialize(InputAction action, string name, Sprite icon)
             {
                 m_Action = action;
-                m_BindText.text = m_Action.controls[0].displayName;
+                m_BindText.text = m_Action?.controls[0].displayName;
                 m_TitleText.text = $"[{name}]";
                 if (icon != null)
                     m_Sprite = icon;
             }
-            
+
             public void UpdateButtonVisuals(bool active, XRDeviceSimulatorUI uiManager)
             {
                 UpdateButtonActive(active);
@@ -51,6 +52,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
 
                 m_Icon.transform.localScale = Vector3.one;
                 m_Icon.sprite = uiManager.GetInputIcon(m_Action?.controls[0]);
+                m_Icon.enabled = m_Icon.sprite != null;
             }
 
             public void SetButtonColor(Color color)
@@ -68,10 +70,10 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
 
         [Header("General")]
 
-        [SerializeField] 
+        [SerializeField]
         Image m_HandImage;
 
-        [SerializeField] 
+        [SerializeField]
         Sprite m_HandDefaultSprite;
 
         [SerializeField]
@@ -79,6 +81,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
 
         XRDeviceSimulatorUI m_MainUIManager;
         HandExpressionUI m_ActiveExpression;
+        SimulatedHandExpressionManager m_HandExpressionManager;
 
         protected void Awake()
         {
@@ -87,16 +90,37 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
 
         internal void Initialize(XRDeviceSimulator simulator)
         {
-            for (var index = 0; index < simulator.simulatedHandExpressions.Count; ++index)
+            if (!simulator.gameObject.TryGetComponent(out m_HandExpressionManager))
             {
-                var simulatedExpression = simulator.simulatedHandExpressions[index];
+                Debug.LogError($"Could not find SimulatedHandExpressionManager component on {simulator.name}, disabling simulator UI.");
+                gameObject.SetActive(false);
+                return;
+            }
+
+            for (var index = 0; index < m_HandExpressionManager.simulatedHandExpressions.Count; ++index)
+            {
+                var simulatedExpression = m_HandExpressionManager.simulatedHandExpressions[index];
                 if (index >= m_Expressions.Count)
                 {
                     Debug.LogWarning("The Device Simulator has more expressions than the UI can display.", this);
                 }
                 else
                 {
-                    m_Expressions[index].Initialize(simulatedExpression.toggleAction, simulatedExpression.name, simulatedExpression.icon);
+                    InputAction action = null;
+                    switch (simulatedExpression.toggleInput.inputSourceMode)
+                    {
+                        case XRInputButtonReader.InputSourceMode.InputActionReference:
+                            action = simulatedExpression.toggleInput.inputActionReferencePerformed;
+                            break;
+                        case XRInputButtonReader.InputSourceMode.InputAction:
+                            action = simulatedExpression.toggleInput.inputActionPerformed;
+                            break;
+                        default:
+                            Debug.LogWarning($"Toggle Input for Simulated Hand Expression \"{simulatedExpression.name}\" is not an input action, cannot display binding or icon in UI.", this);
+                            break;
+                    }
+
+                    m_Expressions[index].Initialize(action, simulatedExpression.name, simulatedExpression.icon);
                 }
             }
 
@@ -117,7 +141,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
                     var isActiveExpression = m_ActiveExpression == expression;
                     expression.SetButtonColor(isActiveExpression ? m_MainUIManager.selectedColor : m_MainUIManager.buttonColor);
                 }
-                
+
                 m_HandImage.color = m_MainUIManager.deviceColor;
             }
             else
@@ -130,15 +154,16 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
                     expression.SetButtonColor(isActiveExpression ? disabledSelectedColor : m_MainUIManager.disabledButtonColor);
                     expression.UpdateButtonActive(isActiveExpression);
                 }
-                
+
                 m_HandImage.color = m_MainUIManager.disabledDeviceColor;
             }
         }
 
-        internal void ToggleExpression(XRDeviceSimulator.SimulatedHandExpression simulatedExpression, XRDeviceSimulator simulator)
+        internal void ToggleExpression(SimulatedHandExpression simulatedExpression, XRDeviceSimulator simulator)
         {
             // The index of the hand expression corresponds 1:1 with the index of the UI button
-            var index = simulator.simulatedHandExpressions.IndexOf(simulatedExpression);
+            var index = m_HandExpressionManager.simulatedHandExpressions.IndexOf(simulatedExpression);
+
             if (index >= m_Expressions.Count)
             {
                 Debug.LogWarning("The Device Simulator has more expressions than the UI can display.", this);
@@ -170,7 +195,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
                 m_ActiveExpression = expression;
             }
         }
-        
+
         void SetExpressionActiveStatus(bool isActive, HandExpressionUI expression)
         {
             expression.SetButtonColor(isActive ? m_MainUIManager.selectedColor : m_MainUIManager.buttonColor);
@@ -179,4 +204,3 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
         }
     }
 }
-
