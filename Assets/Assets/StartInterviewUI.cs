@@ -41,6 +41,6 @@ public void LoadScene()
 {
     Debug.Log("Home clicked");
     
-    SceneManager.LoadScene("Interview");
+    SceneManager.LoadScene("InterviewArea");
 }
 }
