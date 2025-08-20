@@ -74148,6 +74148,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'XR Origin Hands (XR Rig) '
       objectReference: {fileID: 0}
+    - target: {fileID: 2218496723442559054, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -74995,6 +74999,91 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008130337}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2008620086
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1325283247859065503, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325283247859065503, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325283247859065503, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325283247859065503, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021464852169344449, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021464852169344449, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021464852169344449, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021464852169344449, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.224
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021464852169344449, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.114
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021464852169344449, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.3315735
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021464852169344449, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021464852169344449, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021464852169344449, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021464852169344449, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021464852169344449, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021464852169344449, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021464852169344449, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184222482113561932, guid: 926f08238425bd94787f0834dc720967, type: 3}
+      propertyPath: m_Name
+      value: XR Origin (XR Rig) Hands
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 926f08238425bd94787f0834dc720967, type: 3}
 --- !u!1 &2008924021
 GameObject:
   m_ObjectHideFlags: 0
@@ -80440,6 +80529,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1097823821}
   - {fileID: 1989872202}
+  - {fileID: 2008620086}
   - {fileID: 203844589}
   - {fileID: 435364398}
   - {fileID: 2084248229}
