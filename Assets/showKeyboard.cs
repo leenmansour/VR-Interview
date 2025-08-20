@@ -22,9 +22,10 @@ public class showKeyboard : MonoBehaviour
     NonNativeKeyboard.Instance.PresentKeyboard(inputField.text);
    }
 
-  public void OnSubmit()
+ public void OnSubmit()
 {
-    PlayerData.UserName = inputField.text;
-    SceneManager.LoadScene("Interview"); 
+    PlayerName.UserName = NonNativeKeyboard.Instance.InputField.text;
+    Debug.Log("Submitted name: " + PlayerName.UserName);
+    SceneManager.LoadScene("Interview");
 }
 }

@@ -7,6 +7,13 @@ public class ShowName : MonoBehaviour
 
     void Start()
     {
-        nameText.text = PlayerData.UserName;
+        if (nameText != null)   // ✅ prevents crash
+        {
+            nameText.text = PlayerName.UserName;
+        }
+        else
+        {
+            Debug.LogError("ShowName: nameText reference is missing!");
+        }
     }
 }
