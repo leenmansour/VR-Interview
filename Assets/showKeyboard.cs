@@ -1,10 +1,13 @@
 using UnityEngine;
 using TMPro;
 using Microsoft.MixedReality.Toolkit.Experimental.UI;
+using UnityEngine.SceneManagement;
+
 public class showKeyboard : MonoBehaviour
 {
 
     private TMP_InputField inputField;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,4 +21,10 @@ public class showKeyboard : MonoBehaviour
     NonNativeKeyboard.Instance.InputField= inputField;
     NonNativeKeyboard.Instance.PresentKeyboard(inputField.text);
    }
+
+  public void OnSubmit()
+{
+    PlayerData.UserName = inputField.text;
+    SceneManager.LoadScene("Interview"); 
+}
 }
