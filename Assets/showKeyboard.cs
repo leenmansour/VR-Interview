@@ -7,6 +7,8 @@ public class showKeyboard : MonoBehaviour
 {
 
     private TMP_InputField inputField;
+    public TMP_Dropdown bootcampDropdown;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,6 +28,7 @@ public class showKeyboard : MonoBehaviour
 {
     PlayerName.UserName = NonNativeKeyboard.Instance.InputField.text;
     Debug.Log("Submitted name: " + PlayerName.UserName);
+    PlayerName.SelectedBootcamp = bootcampDropdown.value; 
     SceneManager.LoadScene("Interview");
 }
 }
