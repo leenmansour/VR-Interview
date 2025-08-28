@@ -66229,7 +66229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e74c20936381cc74f9133eaa11820b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  convaiAudio: {fileID: 1102156338}
+  convaiAudio: {fileID: 0}
   skinnedMesh: {fileID: 637609390}
   jawBlendShape: jawOpen
   characterAnimator: {fileID: 637609388}
@@ -86502,155 +86502,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825141523}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &826174028
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 670819032993934080, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: <TargetObject>k__BackingField
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 675672475593539715, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778812014497974591, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2404403633021580434, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582405475271366465, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2639540652976512734, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: characterID
-      value: 8738c16a-8100-11f0-991e-42010a7be01f
-      objectReference: {fileID: 0}
-    - target: {fileID: 2639540652976512734, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: characterName
-      value: Norah
-      objectReference: {fileID: 0}
-    - target: {fileID: 3323422670716065006, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3351586718717485835, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5322986
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5322986
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5322986
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 24.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.030027
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4272753387560391310, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_Name
-      value: Convai NPC Amelia
-      objectReference: {fileID: 0}
-    - target: {fileID: 4272753387560391310, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4367818883681779912, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4480022599719409463, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862549978398961160, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4950841499080497513, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5052270574143547687, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5349080475298188187, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5586535688550510528, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7992122960702784316, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9016814105367815172, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
 --- !u!1 &827008842
 GameObject:
   m_ObjectHideFlags: 0
@@ -112186,11 +112037,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102034540}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!82 &1102156338 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8661220628329745143, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
-  m_PrefabInstance: {fileID: 826174028}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1102374673
 GameObject:
   m_ObjectHideFlags: 0
@@ -119318,6 +119164,14 @@ PrefabInstance:
     - target: {fileID: 4604351693166002233, guid: 7108bc695aad724478f9ae0870ce2765, type: 3}
       propertyPath: m_Name
       value: Convai NPC Missy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065959304475275240, guid: 7108bc695aad724478f9ae0870ce2765, type: 3}
+      propertyPath: characterID
+      value: 8738c16a-8100-11f0-991e-42010a7be01f
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065959304475275240, guid: 7108bc695aad724478f9ae0870ce2765, type: 3}
+      propertyPath: characterName
+      value: Norah
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -152332,7 +152186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e74c20936381cc74f9133eaa11820b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  convaiAudio: {fileID: 1102156338}
+  convaiAudio: {fileID: 0}
   skinnedMesh: {fileID: 1537861365}
   jawBlendShape: jawOpen
   characterAnimator: {fileID: 1780342510288126506}
@@ -215909,7 +215763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e74c20936381cc74f9133eaa11820b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  convaiAudio: {fileID: 1102156338}
+  convaiAudio: {fileID: 0}
   skinnedMesh: {fileID: 8391265748914793577}
   jawBlendShape: jawOpen
   characterAnimator: {fileID: 1780342510288126506}
@@ -233514,7 +233368,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1659871984}
-  - {fileID: 826174028}
   - {fileID: 1097823821}
   - {fileID: 1989872202}
   - {fileID: 2008620086}
