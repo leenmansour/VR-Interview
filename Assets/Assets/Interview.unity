@@ -182170,9 +182170,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   convaiAudio: {fileID: 1759508147}
-  skinnedMesh: {fileID: 4853095798446672694}
+  skinnedMesh: {fileID: 1866563011}
   jawBlendShape: jawOpen
-  characterAnimator: {fileID: 1978403408}
+  characterAnimator: {fileID: 1858801310}
   talkingBool: Talk
   talkingThreshold: 5
   stopDelay: 0.25
